@@ -1,5 +1,10 @@
+import React from 'react';
+
 import Image from "next/image"
+
 import logo from "../public/lifecatchlogo.png"
+import heroImage from "../public/heroImage.png"
+
 export default function Home() {
   return (<>
     <div className="mainHome">
@@ -16,7 +21,14 @@ export default function Home() {
         </div>
       </div>
 
-      a
+      <div className='heroSection'>
+        <div className='heroImage'>
+          <Image src={heroImage} alt=""/>
+        </div>
+      </div>
+      <div className="teamLifeCatchSection">
+        aaaa
+      </div>
     </div>
   </>)
 }
