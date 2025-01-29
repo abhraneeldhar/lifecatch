@@ -61,12 +61,25 @@
   height: 100vh;
 
   /* background-color: blue; */
+  .backgroundVid{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      /* backdrop-filter: blur(20px); */
+      filter: blur(20px);
+      opacity: 0.1;
+    }
+  }
   .heroImage {
     position: absolute;
-    bottom: 0;
+    bottom: -6px;
     /* background-color: red; */
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content; */
+    /* height: fit-content; */
 
     img {
       object-fit: cover;

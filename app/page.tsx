@@ -4,6 +4,7 @@ import Image from "next/image"
 
 import logo from "../public/lifecatchlogo.png"
 import heroImage from "../public/heroImage.png"
+import backgroundVid from "../public/backgroundvid.gif"
 
 export default function Home() {
   return (<>
@@ -22,6 +23,9 @@ export default function Home() {
       </div>
 
       <div className='heroSection'>
+        <div className='backgroundVid'>
+          <Image src={backgroundVid} alt=""/>
+        </div>
         <div className='heroImage'>
           <Image src={heroImage} alt=""/>
         </div>
