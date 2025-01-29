@@ -71,7 +71,7 @@
       object-fit: cover;
       /* backdrop-filter: blur(20px); */
       filter: blur(20px);
-      opacity: 0.1;
+      opacity: 0.4;
     }
   }
   .heroImage {

@@ -6,6 +6,7 @@ import logo from "../public/lifecatchlogo.png"
 import heroImage from "../public/heroImage.png"
 import backgroundVid from "../public/backgroundvid.gif"
 
+
 export default function Home() {
   return (<>
     <div className="mainHome">
@@ -29,6 +30,8 @@ export default function Home() {
         <div className='heroImage'>
           <Image src={heroImage} alt=""/>
         </div>
+
+        
       </div>
       <div className="teamLifeCatchSection">
         aaaa
