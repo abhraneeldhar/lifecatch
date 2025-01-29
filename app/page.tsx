@@ -5,14 +5,14 @@ export default function Home() {
     <div className="mainHome">
       <div className="navBar">
         <div className="appLogo">
-          <Image src={logo} height={30} width={30} alt=""/>
+          <Image unoptimized src={logo} alt=""/>
         </div>
         <div className="tags">
-          <a href="#lifecatch">Life Catch</a>
-          <a href="#ourtarget">Target</a>
-          <a href="#subscribe">Subscribe</a>
-          <a href="#prototype">Prototype</a>
-          <a href="#aboutus">About us</a>
+          <div className="tagLinks">Life Catch</div>
+          <div className="tagLinks">Target</div>
+          <div className="tagLinks">Subscribe</div>
+          <div className="tagLinks">Prototype</div>
+          <div className="tagLinks">About Us</div>
         </div>
       </div>
 
