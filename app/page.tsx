@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 import logo from "../public/lifecatchlogo.png"
 import heroImage from "../public/heroImage.png"
@@ -9,10 +9,30 @@ import kidModel from "../public/kidModel.png"
 import adultModel from "../public/adultModel.png"
 import blackBiker from "../public/blackBikerModel.png"
 import oldModel from "../public/oldModel.png"
+import blackJacket from "../public/blackJacket.png"
+import greenJacket from "../public/greenJacket.png"
+import teamPic from "../public/teamPic1.png"
+
+import abhra from "../public/profilePics/Abhra.jpg"
+import sid from "../public/profilePics/Sid.jpg"
+import tridip from "../public/profilePics/Tridip.jpg"
+import arya from "../public/profilePics/Arya.jpg"
+import risav from "../public/profilePics/Risav.jpg"
 
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
+  const profileCard = (src: StaticImageData, name: string, role: string) => {
+    return (<>
+      <div className='profileCard'>
+        <div className='profilePic'>
+          <Image src={src} alt="" />
+        </div>
+        <h1>{name}</h1>
+        <p>{role}</p>
+      </div>
+    </>)
+  }
   return (<>
     <div className="mainHome">
       <div className="navBar">
@@ -68,7 +88,22 @@ export default function Home() {
 
         <div className='getYoursNow'>
           <h1 className='sectionHeading'>Get yours now</h1>
+          <div className="sectionContent">
+            <div className="getYoursNowsectionImages">
+              <div className='rotateBox'></div>
+              <Image className='greenJacket' src={greenJacket} alt="" />
+              <Image className='blackJacket' src={blackJacket} alt="" />
+            </div>
+            <Button className='subscribeBtn'>Subscribe</Button>
+          </div>
+        </div>
 
+        <div className='ourteam'>
+          <h1 className='sectionHeading'>Meet the creators</h1>
+          <div className="sectionImages">
+            <Image src={teamPic} alt="" />
+          </div>
+          <div className='profileCardHolder'></div>
         </div>
 
 

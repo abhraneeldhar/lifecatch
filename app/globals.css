@@ -125,6 +125,7 @@
   color: black;
   transition: all 0.4s;
   transform: rotate(-2deg);
+  animation: subscribeBtn 3s infinite;
 }
 
 .subscribeBtn:hover {
@@ -238,7 +239,105 @@
 
 .getYoursNow{
   padding: 20px;
+  min-height: 500px;
   h1{
     text-align: center;
   }
+  .sectionContent{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    position: relative;
+    .getYoursNowsectionImages{
+      /* transform: rotate(-1deg); */
+      position: relative;
+      display: flex;
+      justify-content: center;
+      height: 500px;
+      width: 500px;
+      background-color: #00d4a6;
+      border-radius: 20%;
+      /* animation: rotateAnimation 3s infinite; */
+    }
+    img{
+      position: absolute;
+      height: 400px;
+      object-fit: contain;
+      bottom: 10%;
+      /* transform: rotate(0deg); */
+    }
+    .greenJacket{
+      transform: translateX(-20%);
+      z-index: 3;
+    }
+    .blackJacket{
+      transform: translateX(20%);
+      z-index: 3;
+    }
+    .rotateBox{
+      height: 500px;
+      aspect-ratio: 1/1;
+      background-color: #11e7b8 ;
+      animation: rotateAnimation 4s infinite;
+      border-radius: 25%;
+      z-index: 1;
+    }
+    .subscribeBtn{
+      z-index: 4;
+      position: absolute;
+      /* bottom: 0; */
+      background-color: rgb(38, 190, 236);
+      color: black;
+      border: 1px solid white;
+      transform: rotate(2deg);
+      animation: subscribeBtn 2s infinite;
+    }
+    .subscribeBtn:hover{
+      background-color: black;
+      border: none;
+      color: white;
+    }
+  }
 }
+
+@keyframes rotateAnimation{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes subscribeBtn{
+  0%{
+    transform: rotate(-2deg) translateY(10px);
+  }
+  50%{
+    transform: rotate(2deg) translateY(0);
+  }
+  100%{
+    transform: rotate(-2deg) translateY(10px);
+  }
+}
+
+
+.ourteam{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    text-align: center;
+  }
+  img{
+    margin-top: 20px;
+    object-fit: contain;
+    height: 500px;
+  }
+}
+
