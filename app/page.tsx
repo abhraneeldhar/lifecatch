@@ -65,6 +65,13 @@ export default function Home() {
             <Image className='oldModel' src={oldModel} alt="" />
           </div>
         </div>
+
+        <div className='getYoursNow'>
+          <h1 className='sectionHeading'>Get yours now</h1>
+
+        </div>
+
+
       </div>
     </div>
   </>)
