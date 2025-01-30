@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import Image, { StaticImageData } from "next/image"
 
@@ -16,23 +16,39 @@ import teamPic from "../public/teamPic1.png"
 import abhra from "../public/profilePics/Abhra.jpg"
 import sid from "../public/profilePics/Sid.jpg"
 import tridip from "../public/profilePics/Tridip.jpg"
-import arya from "../public/profilePics/Arya.jpg"
+import arya from "../public/profilePics/Arya.png"
 import risav from "../public/profilePics/Risav.jpg"
 
 import { Button } from '@/components/ui/button';
 
 export default function Home() {
-  const profileCard = (src: StaticImageData, name: string, role: string) => {
-    return (<>
-      <div className='profileCard'>
-        <div className='profilePic'>
-          <Image src={src} alt="" />
-        </div>
-        <h1>{name}</h1>
-        <p>{role}</p>
-      </div>
-    </>)
-  }
+  const teamMates:{src:StaticImageData,name:string,role:string}[]=[
+    {
+      src:arya,
+      name:"Arya Jha",
+      role: "SALES – FINANCE & DESIGN HEAD"
+    },
+    {
+      src:abhra,
+      name:"Abhraneel Dhar",
+      role:"TECHNOLOGY & MANUFACTURING"
+    },
+    {
+      src:tridip,
+      name:"Tridip Debnath",
+      role:"MARKETING & PROMOTION"
+    },
+    {
+      src:sid,
+      name:"SIDDHARTHA DUTTA",
+      role:"MANUFACTURING & PRODUCT IDEATION"
+    },
+    {
+      src:risav,
+      name:"Risav Chanda",
+      role:"SOCIAL MEDIA PR &  MANAGER"
+    }
+  ]
   return (<>
     <div className="mainHome">
       <div className="navBar">
@@ -103,7 +119,17 @@ export default function Home() {
           <div className="sectionImages">
             <Image src={teamPic} alt="" />
           </div>
-          <div className='profileCardHolder'></div>
+          <div className='profileCardHolder'>
+            {teamMates.map((person)=>(
+              <div key={person.name} className='profileCard'>
+                <div className='profileImage'>
+                  <Image src={person.src} alt=""/>
+                </div>
+                <h1>{person.name}</h1>
+                <p>{person.role}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
 
