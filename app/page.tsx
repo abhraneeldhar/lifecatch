@@ -6,6 +6,7 @@ import logo from "../public/lifecatchlogo.png"
 import heroImage from "../public/heroImage.png"
 import backgroundVid from "../public/backgroundvid.gif"
 
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (<>
@@ -30,6 +31,7 @@ export default function Home() {
         <div className='heroImage'>
           <Image src={heroImage} alt=""/>
         </div>
+        <Button className='subscribeBtn'>Subscribe</Button>
 
         
       </div>
