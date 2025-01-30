@@ -123,7 +123,7 @@ export default function Home() {
             {teamMates.map((person)=>(
               <div key={person.name} className='profileCard'>
                 <div className='profileImage'>
-                  <Image src={person.src} alt=""/>
+                  <Image className='profilePicImg' src={person.src} alt=""/>
                 </div>
                 <h1>{person.name}</h1>
                 <p>{person.role}</p>
