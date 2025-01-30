@@ -8,7 +8,7 @@ import backgroundVid from "../public/backgroundvid.gif"
 import kidModel from "../public/kidModel.png"
 import adultModel from "../public/adultModel.png"
 import blackBiker from "../public/blackBikerModel.png"
-
+import oldModel from "../public/oldModel.png"
 
 import { Button } from '@/components/ui/button';
 
@@ -43,7 +43,7 @@ export default function Home() {
       <div className="teamLifeCatchSection">
         <h1 className='sectionHeading'>Who are we ?</h1>
         <div className='sectionContent'>
-          <p>We are LifeCatch, a team dedicated to redefining safety with innovative airbag technology. <br/> <br/>Our mission is simple: to protect lives by minimizing the impact of falls, whether on the road or in everyday life. Designed for both high-speed bikers and individuals with slower reflexes, our airbag jacket deploys in an instant, acting as a personal safety net when you need it most.
+          <p>We are LifeCatch, a team dedicated to redefining safety with innovative airbag technology. <br /> <br />Our mission is simple: to protect lives by minimizing the impact of falls, whether on the road or in everyday life. Designed for both high-speed bikers and individuals with slower reflexes, our airbag jacket deploys in an instant, acting as a personal safety net when you need it most.
             <br />
             At LifeCatch, we believe that safety should never be a compromise. Whether you're riding at full speed or navigating daily challenges, our technology is built to cushion falls, reduce injuries, and give you the confidence to move freely. With cutting-edge sensors and rapid deployment, our jacket ensures protection is always one step ahead.
             <br />
@@ -53,6 +53,16 @@ export default function Home() {
             <Image className='blackBikerImage ' src={blackBiker} alt="" />
             <Image className='adultModelImage' src={adultModel} alt="" />
 
+          </div>
+        </div>
+
+        <div className='forTheQuickAndTheCautiousSection'>
+          <h1 className='sectionHeading'>For the Quick and the Cautious</h1>
+          <div className='sectionImages'>
+            <Image className='kidModel' src={kidModel} alt="" />
+            <Image className='blackBikerImage ' src={blackBiker} alt="" />
+            <Image className='adultModelImage' src={adultModel} alt="" />
+            <Image className='oldModel' src={oldModel} alt="" />
           </div>
         </div>
       </div>
