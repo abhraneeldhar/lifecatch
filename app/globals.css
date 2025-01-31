@@ -424,16 +424,23 @@
   .heroImage img{
     height: 70vh;
   }
+  
+
   .teamLifeCatchSection .sectionContent{
     display: flex;
     flex-direction: column;
   }
  
   .teamLifeCatchSection .sectionContent .sectionImages{
-    height: 1000px;
-    background-color: red;
+    height: 500px;
+    width: 100%;
     z-index: 1;
+    position: relative;
     .blackBikerImage{
+      height: 400px;
+      z-index: 2;
+    }
+    .adultModelImage{
       height: 400px;
     }
   }
