@@ -57,7 +57,7 @@ export default function Home() {
       src: risav,
       name: "Risav Chanda",
       role: "SOCIAL MEDIA PR &  MANAGER",
-      link: ""
+      link: "https://www.linkedin.com/in/risav-chanda-a83110335"
     }
   ]
   return (<>
@@ -80,7 +80,7 @@ export default function Home() {
           <Image src={backgroundVid} alt="" />
         </div>
         <div className='heroImage'>
-          <Image src={heroImage} alt="" />
+          <Image src={heroImage} unoptimized alt="" />
         </div>
         <h1>Life Catch</h1>
         <Button className='subscribeBtn'>Subscribe</Button>
@@ -97,8 +97,8 @@ export default function Home() {
             Because every second counts, and every life matters.<br /><br /> Stay fast, stay safe—LifeCatch has you covered.</p>
 
           <div className='sectionImages'>
-            <Image className='blackBikerImage ' src={blackBiker} alt="" />
-            <Image className='adultModelImage' src={adultModel} alt="" />
+            <Image unoptimized className='blackBikerImage ' src={blackBiker} alt="" />
+            <Image unoptimized className='adultModelImage' src={adultModel} alt="" />
 
           </div>
         </div>
