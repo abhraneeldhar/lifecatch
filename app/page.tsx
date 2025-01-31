@@ -23,7 +23,7 @@ import { Button } from '@/components/ui/button';
 
 import { ProfileCard } from './component/personCard';
 import Link from 'next/link';
-import { Instagram, Mail, Phone } from 'lucide-react';
+import { Globe, Instagram, Mail, Phone } from 'lucide-react';
 // import { useRouter } from 'next/router';
 
 export default function Home() {
@@ -138,19 +138,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='contactUs'>
+  
+
+
+      </div>
+      <div className='contactUs'>
           <h1 className='sectionHeading'>Get in touch</h1>
           <div className='sectionContent'>
             <div className='links'>
               <a><Phone/>+91 9051589728</a>
+              <a href=""><Globe/> Lifecatch.com</a>
               <a><Mail />LifeCatch@gmail.com</a>
-              <a href="https://www.instagram.com/_life_catch/"><Instagram/>@_life_catch</a>
+              <a href="https://www.instagram.com/_life_catch/" target='_blank'><Instagram/>@_life_catch</a>
             </div>
           </div>
         </div>
-
-
-      </div>
     </div>
   </>)
 }

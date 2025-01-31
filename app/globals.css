@@ -388,6 +388,9 @@
 
 .contactUs{
   margin-top: 40px;
+  background-color: rgb(232, 232, 232);
+  color: black;
+  padding-left: 20px;
 }
 .contactUs .sectionContent{
   padding: 20px;
@@ -395,9 +398,13 @@
 .contactUs .links{
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
 }
 .contactUs .links a{
+  transition: all 0.2s;
   display: flex;
-  gap: 5px;
+  gap: 10px;
+}
+.contactUs .links a:hover{
+  color: rgb(184, 184, 184);
 }
