@@ -11,7 +11,7 @@ import blackBiker from "../public/blackBikerModel.png"
 import oldModel from "../public/oldModel.png"
 import blackJacket from "../public/blackJacket.png"
 import greenJacket from "../public/greenJacket.png"
-import teamPic from "../public/teamPic1.png"
+import teamPic from "../public/teamPic.jpg"
 
 import abhra from "../public/profilePics/Abhra.jpg"
 import sid from "../public/profilePics/Sid.jpg"
