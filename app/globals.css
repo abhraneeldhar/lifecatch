@@ -34,7 +34,7 @@
     /* padding: 10px; */
     padding-left: 10px;
 
-    
+
   }
 
   .tags {
@@ -82,7 +82,7 @@
   }
 }
 
-.heroSection  h1 {
+.heroSection h1 {
   position: absolute;
   top: 40px;
   font-size: 60px;
@@ -145,20 +145,22 @@
     .sectionImages {
       display: flex;
       position: relative;
-      flex: 1;
+      /* flex: 1; */
       height: 500px;
+      width: 550px;
       justify-content: center;
-      background-color:#00d4a6;
+      background-color: #00d4a6;
       border-radius: 20px;
       transform: rotate(1deg);
-      
-      .blackBikerImage{
+
+      .blackBikerImage {
         height: 500px;
         z-index: 2;
         transform: translateX(-60px);
-    
+
       }
-      .adultModelImage{
+
+      .adultModelImage {
         height: 470px;
         z-index: 1;
         transform: translateX(30px);
@@ -171,6 +173,7 @@
   flex: 1;
   padding: 30px;
 }
+
 .teamLifeCatchSection .sectionContent img {
   object-fit: contain;
   position: absolute;
@@ -187,7 +190,7 @@
   display: flex;
 }
 
-.forTheQuickAndTheCautiousSection{
+.forTheQuickAndTheCautiousSection {
   padding: 20px;
   padding-top: 30px;
   height: 700px;
@@ -195,50 +198,59 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  
-  .sectionImages{
+
+  .sectionImages {
     justify-content: center;
     position: relative;
     display: flex;
-    background-color:#9ce6f3;
+    background-color: #9ce6f3;
     border-radius: 20px;
     height: 600px;
     width: 90%;
-    
-    .blackBikerImage{
+
+    .blackBikerImage {
       height: 590px;
       z-index: 3;
-      right: 35%;
+      /* right: 35%; */
+      transform: translateX(100px);
     }
-    .adultModelImage{
-      right: 25%;
+
+    .adultModelImage {
+      /* right: 25%; */
       height: 550px;
+      transform: translateX(200px);
+
     }
-    .kidModel{
-      left: 25%;
+
+    .kidModel {
+      /* left: 25%; */
       height: 400px;
       z-index: 3;
+      transform: translateX(-200px);
+
     }
-    .oldModel{
-      left: 30%;
+
+    .oldModel {
+      /* left: 30%; */
       height: 550px;
-      z-index:2;
-      
+      z-index: 2;
+      transform: translateX(-90px);
+
     }
   }
 }
 
-.forTheQuickAndTheCautiousSection .sectionImages img{
+.forTheQuickAndTheCautiousSection .sectionImages img {
   position: absolute;
   bottom: 0;
   object-fit: contain;
 }
 
-.getYoursNow  h1{
+.getYoursNow h1 {
   text-align: center;
 }
 
-.getYoursNow .sectionContent img{
+.getYoursNow .sectionContent img {
   position: absolute;
   height: 400px;
   object-fit: contain;
@@ -246,17 +258,18 @@
   /* transform: rotate(0deg); */
 }
 
-.getYoursNow{
+.getYoursNow {
   padding: 20px;
   min-height: 500px;
- 
-  .sectionContent{
+
+  .sectionContent {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     height: 500px;
     position: relative;
-    .getYoursNowsectionImages{
+
+    .getYoursNowsectionImages {
       /* transform: rotate(-1deg); */
       position: relative;
       display: flex;
@@ -267,24 +280,27 @@
       border-radius: 20%;
       /* animation: rotateAnimation 3s infinite; */
     }
-    
-    .greenJacket{
+
+    .greenJacket {
       transform: translateX(-20%);
       z-index: 3;
     }
-    .blackJacket{
+
+    .blackJacket {
       transform: translateX(20%);
       z-index: 3;
     }
-    .rotateBox{
+
+    .rotateBox {
       height: 500px;
       aspect-ratio: 1/1;
-      background-color: #11e7b8 ;
+      background-color: #11e7b8;
       animation: rotateAnimation 4s infinite;
       border-radius: 25%;
       z-index: 1;
     }
-    .subscribeBtn{
+
+    .subscribeBtn {
       z-index: 4;
       position: absolute;
       /* bottom: 0; */
@@ -294,7 +310,8 @@
       transform: rotate(2deg);
       animation: subscribeBtn 2s infinite;
     }
-    .subscribeBtn:hover{
+
+    .subscribeBtn:hover {
       background-color: black;
       border: none;
       color: white;
@@ -302,54 +319,60 @@
   }
 }
 
-@keyframes rotateAnimation{
-  0%{
+@keyframes rotateAnimation {
+  0% {
     transform: rotate(0deg);
   }
-  50%{
+
+  50% {
     transform: rotate(180deg);
   }
-  100%{
+
+  100% {
     transform: rotate(360deg);
   }
 }
 
-@keyframes subscribeBtn{
-  0%{
+@keyframes subscribeBtn {
+  0% {
     transform: rotate(-2deg) translateY(10px);
   }
-  50%{
+
+  50% {
     transform: rotate(2deg) translateY(0);
   }
-  100%{
+
+  100% {
     transform: rotate(-2deg) translateY(10px);
   }
 }
 
 
-.ourteam{
+.ourteam {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ourteam h1{
+.ourteam h1 {
   text-align: center;
 }
-.ourteam .sectionImages{
+
+.ourteam .sectionImages {
   border-radius: 20px;
   width: fit-content;
 }
-.teamImage{
+
+.teamImage {
   margin-top: 20px;
   object-fit: contain;
   height: 500px;
   border-radius: 20px;
 }
 
-.ourteam{
-  .profileCardHolder{
+.ourteam {
+  .profileCardHolder {
     display: flex;
     margin: 30px;
     margin-top: 70px;
@@ -359,7 +382,7 @@
 }
 
 
-.profileCard{
+.profileCard {
   height: 300px;
   width: 250px;
   display: flex;
@@ -368,86 +391,132 @@
   gap: 10px;
   transition: all 0.1s;
 }
-.profileCard:hover{
+
+.profileCard:hover {
   transform: scale(1.05);
 }
-.profileCard h1{
+
+.profileCard h1 {
   font-size: 25px;
 }
-.profileCard p{
+
+.profileCard p {
   text-align: center;
   font-weight: 200;
 }
-.profileImage img{
+
+.profileImage img {
   height: 200px;
   width: 200px;
   border-radius: 20px;
 }
 
-.contactUs{
+.contactUs {
   margin-top: 40px;
   background-color: rgb(232, 232, 232);
   color: black;
   padding-left: 20px;
 }
-.contactUs .sectionContent{
+
+.contactUs .sectionContent {
   padding: 20px;
 }
-.contactUs .links{
+
+.contactUs .links {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.contactUs .links a{
+
+.contactUs .links a {
   transition: all 0.2s;
   display: flex;
   gap: 10px;
 }
-.contactUs .links a:hover{
+
+.contactUs .links a:hover {
   color: rgb(184, 184, 184);
 }
 
 
-@media (max-width: 500px){
-  .mainHome{
+@media (max-width: 500px) {
+  .mainHome {
     width: 100svw;
     overflow: hidden;
   }
 
-  .navBar{
+  .navBar {
     width: 100%;
     font-size: 12px;
   }
-  .heroSection  h1{
+
+  .heroSection h1 {
     top: 15%;
   }
-  .heroImage img{
+
+  .heroImage img {
     height: 70vh;
   }
-  
 
-  .teamLifeCatchSection .sectionContent{
+
+  .teamLifeCatchSection .sectionContent {
     display: flex;
     flex-direction: column;
   }
- 
-  .teamLifeCatchSection .sectionContent .sectionImages{
-    height: 500px;
-    width: 100%;
+
+  .teamLifeCatchSection .sectionContent .sectionImages {
+    height: 400px;
+    width: 90%;
+    margin: auto;
     z-index: 1;
-    position: relative;
-    .blackBikerImage{
+    position: static;
+
+    .blackBikerImage {
       height: 400px;
       z-index: 2;
     }
-    .adultModelImage{
+
+    .adultModelImage {
       height: 400px;
     }
   }
 
-  .teamLifeCatchSection .sectionContent p{
+  .teamLifeCatchSection .sectionContent p {
     padding: 10px;
     font-size: 14px;
   }
-  
+
+  .forTheQuickAndTheCautiousSection h1 {
+    text-align: center;
+  }
+
+  .forTheQuickAndTheCautiousSection .sectionImages {
+    height: 500px;
+    width: 100%;
+
+    .blackBikerImage {
+      height: 350px;
+      z-index: 3;
+      /* right: 35%; */
+    }
+
+    .adultModelImage {
+      /* right: 25%; */
+      height: 350px;
+    }
+
+    .kidModel {
+      /* left: 25%; */
+      height: 240px;
+      z-index: 3;
+    }
+
+    .oldModel {
+      /* left: 30%; */
+      height: 450px;
+      z-index: 2;
+
+    }
+  }
+
 }
