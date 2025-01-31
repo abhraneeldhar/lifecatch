@@ -34,11 +34,7 @@
     /* padding: 10px; */
     padding-left: 10px;
 
-    img {
-      height: 30px;
-      width: 30px;
-      object-fit: contain;
-    }
+    
   }
 
   .tags {
@@ -60,6 +56,12 @@
 
 }
 
+.navBar .appLogo img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
 .heroSection {
   display: flex;
   justify-content: center;
@@ -72,39 +74,37 @@
     width: 100vw;
     background-color: black;
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      /* backdrop-filter: blur(20px); */
-      filter: blur(20px);
-      opacity: 0.4;
-    }
   }
 
   .heroImage {
     position: absolute;
     bottom: 0px;
-    /* background-color: red; */
-    /* width: fit-content; */
-    /* height: fit-content; */
-
-    img {
-      object-fit: cover;
-      height: 80vh;
-      filter: drop-shadow(0 0 10rem #008080);
-      animation: introHeroImage 0.7s ease-in;
-    }
   }
+}
 
-  h1 {
-    position: absolute;
-    top: 40px;
-    font-size: 60px;
-    font-family: "Bitter", serif;
-    /* background-color: black; */
-    padding: 5px 25px;
-  }
+.heroSection  h1 {
+  position: absolute;
+  top: 40px;
+  font-size: 60px;
+  font-family: "Bitter", serif;
+  /* background-color: black; */
+  padding: 5px 25px;
+}
+
+.heroImage img {
+  object-fit: cover;
+  height: 80vh;
+  filter: drop-shadow(0 0 10rem #008080);
+  animation: introHeroImage 0.7s ease-in;
+}
+
+.backgroundVid img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* backdrop-filter: blur(20px); */
+  filter: blur(20px);
+  opacity: 0.4;
 }
 
 @keyframes introHeroImage {
@@ -142,11 +142,6 @@
   .sectionContent {
     gap: 30px;
 
-    p {
-      flex: 1;
-      padding: 30px;
-    }
-
     .sectionImages {
       display: flex;
       position: relative;
@@ -158,11 +153,7 @@
       background-color:#00d4a6;
       border-radius: 20px;
       transform: rotate(1deg);
-      img {
-        object-fit: contain;
-        position: absolute;
-        bottom: 0;
-      }
+      
       .blackBikerImage{
         height: 500px;
         z-index: 2;
@@ -176,7 +167,16 @@
       }
     }
   }
+}
 
+.teamLifeCatchSection .sectionContent p {
+  flex: 1;
+  padding: 30px;
+}
+.teamLifeCatchSection .sectionContent img {
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
 }
 
 .sectionHeading {
@@ -197,9 +197,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  h1{
-    text-align: center;
-  }
+  
   .sectionImages{
     justify-content: center;
     position: relative;
@@ -208,11 +206,7 @@
     border-radius: 20px;
     height: 600px;
     width: 90%;
-    img{
-      position: absolute;
-      bottom: 0;
-      object-fit: contain;
-    }
+    
     .blackBikerImage{
       height: 590px;
       z-index: 3;
@@ -236,13 +230,28 @@
   }
 }
 
+.forTheQuickAndTheCautiousSection .sectionImages img{
+  position: absolute;
+  bottom: 0;
+  object-fit: contain;
+}
+
+.getYoursNow  h1{
+  text-align: center;
+}
+
+.getYoursNow .sectionContent img{
+  position: absolute;
+  height: 400px;
+  object-fit: contain;
+  bottom: 10%;
+  /* transform: rotate(0deg); */
+}
 
 .getYoursNow{
   padding: 20px;
   min-height: 500px;
-  h1{
-    text-align: center;
-  }
+ 
   .sectionContent{
     margin-top: 30px;
     display: flex;
@@ -260,13 +269,7 @@
       border-radius: 20%;
       /* animation: rotateAnimation 3s infinite; */
     }
-    img{
-      position: absolute;
-      height: 400px;
-      object-fit: contain;
-      bottom: 10%;
-      /* transform: rotate(0deg); */
-    }
+    
     .greenJacket{
       transform: translateX(-20%);
       z-index: 3;
@@ -331,16 +334,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1{
-    text-align: center;
-  }
-  .sectionImages{
-    img{
-      margin-top: 20px;
-      object-fit: contain;
-      height: 500px;
-    }
-  }
+}
+
+.ourteam h1{
+  text-align: center;
+}
+.ourteam .sectionImages{
+  border-radius: 20px;
+  width: fit-content;
+}
+.teamImage{
+  margin-top: 20px;
+  object-fit: contain;
+  height: 500px;
+  border-radius: 20px;
 }
 
 .ourteam{
@@ -350,33 +357,47 @@
     margin-top: 70px;
     gap: 20px;
     flex-wrap: wrap;
-    .profileCard{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 200px;
-      width: 200px;
-      /* background-color: red; */
-      
-      .profileImage{
-        height: 150px;
-        aspect-ratio: 1/1;
-        img{
-          object-fit: contain;
-          border-radius: 20px;
-        }
-      }
-      h1{
-        font-size: 20px;
-        text-align: center;
-        margin-top: 10px;
-      }
-      p{
-        font-weight: 300;
-        text-align: center;
-      }
-    }
   }
 }
 
+
+.profileCard{
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.1s;
+}
+.profileCard:hover{
+  transform: scale(1.05);
+}
+.profileCard h1{
+  font-size: 25px;
+}
+.profileCard p{
+  text-align: center;
+  font-weight: 200;
+}
+.profileImage img{
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+}
+
+.contactUs{
+  margin-top: 40px;
+}
+.contactUs .sectionContent{
+  padding: 20px;
+}
+.contactUs .links{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contactUs .links a{
+  display: flex;
+  gap: 5px;
+}

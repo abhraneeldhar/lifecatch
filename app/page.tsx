@@ -21,32 +21,43 @@ import risav from "../public/profilePics/Risav.jpg"
 
 import { Button } from '@/components/ui/button';
 
+import { ProfileCard } from './component/personCard';
+import Link from 'next/link';
+import { Instagram, Mail, Phone } from 'lucide-react';
+// import { useRouter } from 'next/router';
+
 export default function Home() {
-  const teamMates:{src:StaticImageData,name:string,role:string}[]=[
+
+  const teamMates: { src: StaticImageData, name: string, role: string, link: string }[] = [
     {
-      src:arya,
-      name:"Arya Jha",
-      role: "SALES – FINANCE & DESIGN HEAD"
+      src: arya,
+      name: "Arya Jha",
+      role: "SALES-FINANCE & DESIGN HEAD",
+      link: "https://www.linkedin.com/in/arya-jha-259ba9290"
     },
     {
-      src:abhra,
-      name:"Abhraneel Dhar",
-      role:"TECHNOLOGY & MANUFACTURING"
+      src: abhra,
+      name: "Abhraneel Dhar",
+      role: "TECHNOLOGY & MANUFACTURING",
+      link: "https://www.linkedin.com/in/abhraneeldhar/"
     },
     {
-      src:tridip,
-      name:"Tridip Debnath",
-      role:"MARKETING & PROMOTION"
+      src: tridip,
+      name: "Tridip Debnath",
+      role: "MARKETING & PROMOTION",
+      link: "https://www.linkedin.com/in/tridip-dev-3bb294220"
     },
     {
-      src:sid,
-      name:"SIDDHARTHA DUTTA",
-      role:"MANUFACTURING & PRODUCT IDEATION"
+      src: sid,
+      name: "SIDDHARTHA DUTTA",
+      role: "MANUFACTURING & PRODUCT IDEATION",
+      link: "https://www.linkedin.com/in/siddhartha-dutta-a18993338/"
     },
     {
-      src:risav,
-      name:"Risav Chanda",
-      role:"SOCIAL MEDIA PR &  MANAGER"
+      src: risav,
+      name: "Risav Chanda",
+      role: "SOCIAL MEDIA PR &  MANAGER",
+      link: ""
     }
   ]
   return (<>
@@ -117,18 +128,24 @@ export default function Home() {
         <div className='ourteam'>
           <h1 className='sectionHeading'>Meet the creators</h1>
           <div className="sectionImages">
-            <Image src={teamPic} alt="" />
+            <Image className='teamImage' src={teamPic} alt="" />
           </div>
+
           <div className='profileCardHolder'>
-            {teamMates.map((person)=>(
-              <div key={person.name} className='profileCard'>
-                <div className='profileImage'>
-                  <Image className='profilePicImg' src={person.src} alt=""/>
-                </div>
-                <h1>{person.name}</h1>
-                <p>{person.role}</p>
-              </div>
+            {teamMates.map((person) => (
+              <ProfileCard key={person.name} src={person.src} name={person.name} role={person.role} link={person.link} />
             ))}
+          </div>
+        </div>
+
+        <div className='contactUs'>
+          <h1 className='sectionHeading'>Get in touch</h1>
+          <div className='sectionContent'>
+            <div className='links'>
+              <a><Phone/>+91 9051589728</a>
+              <a><Mail />LifeCatch@gmail.com</a>
+              <a href="https://www.instagram.com/_life_catch/"><Instagram/>@_life_catch</a>
+            </div>
           </div>
         </div>
 
