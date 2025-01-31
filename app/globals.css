@@ -147,9 +147,7 @@
       position: relative;
       flex: 1;
       height: 500px;
-      /* height: fit-content; */
       justify-content: center;
-
       background-color:#00d4a6;
       border-radius: 20px;
       transform: rotate(1deg);
@@ -407,4 +405,42 @@
 }
 .contactUs .links a:hover{
   color: rgb(184, 184, 184);
+}
+
+
+@media (max-width: 500px){
+  .mainHome{
+    width: 100svw;
+    overflow: hidden;
+  }
+
+  .navBar{
+    width: 100%;
+    font-size: 12px;
+  }
+  .heroSection  h1{
+    top: 15%;
+  }
+  .heroImage img{
+    height: 70vh;
+  }
+  .teamLifeCatchSection .sectionContent{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .teamLifeCatchSection .sectionContent .sectionImages{
+    height: 1000px;
+    background-color: red;
+    z-index: 1;
+    .blackBikerImage{
+      height: 400px;
+    }
+  }
+
+  .teamLifeCatchSection .sectionContent p{
+    padding: 10px;
+    font-size: 14px;
+  }
+  
 }
