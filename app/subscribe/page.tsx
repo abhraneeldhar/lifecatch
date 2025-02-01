@@ -27,6 +27,8 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+
 
 export default function SubscribePage() {
 
@@ -47,9 +49,9 @@ export default function SubscribePage() {
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                 <DialogTitle/>
                 <DialogDescription/>
-                <DialogContent>
-                    <div className={styles.subscribeDialogMain}>
-                        
+                <DialogContent className={styles.subscribeDialogMain}>
+                    <div>
+                        kaj cholche
                     </div>
                 </DialogContent>
             </Dialog>
