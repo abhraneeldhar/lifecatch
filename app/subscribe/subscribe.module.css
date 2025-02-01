@@ -14,7 +14,7 @@
     padding: 5px;
     position: absolute;
     width: 100vw;
-
+    z-index: 3;
 }
 
 .storeArea {
@@ -25,32 +25,55 @@
 
 .imageArea {
     display: flex;
-    background-color: yellow;
+    /* background-color: yellow; */
     flex: 1;
     align-items: center;
     margin-bottom: 50px;
+    position: relative;
+    /* border: 2px solid black; */
     position: relative;
 }
 
 .imagesTab {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: white;
     flex: 1;
     height: 100%;
     min-width: 50px;
+    padding: 5px;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.imagesTab img {
+    aspect-ratio: 1/1;
+
+    object-fit: cover;
+    /* border: 2px solid rgb(49, 49, 49); */
+    box-shadow: 1px 1px 10px black;
 }
 
 .bigImage {
-    background-color: red;
+    /* background-color: red; */
     height: 400px;
-    min-width: 400px;
+    min-width: 350px;
     flex: 7;
+    /* position: absolute; */
+    z-index: 0;
+}
+
+.bigImage img {
+    height: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .detailsArea {
     flex: 1;
-    min-width: 500px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +98,7 @@
 }
 
 .subscribeBtn {
-    background-color: orange;
+    background-color: rgb(245, 167, 0);
     color: white;
     font-weight: 400;
     font-size: 25px;
@@ -84,13 +107,14 @@
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
+    box-shadow: 3px 3px 10px black;
 }
 
 .subscribeBtn:hover {
     background-color: rgb(244, 178, 55);
 }
 
-.modelSwitcher{
+.modelSwitcher {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -99,15 +123,27 @@
     gap: 10px;
 }
 
-.modelSwitcher img{
+.modelSwitcher img {
     height: 40px;
     width: 40px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid rgb(81, 81, 236);
     transition: all 0.2s;
+    box-shadow: 1px 1px 10px 2px black;
 }
-.modelSwitcher img:hover{
+
+.modelSwitcher img:hover {
     opacity: 0.9;
     transform: scale(1.05);
+}
+
+
+@media (max-width: 500px) {
+    .imagesTab {
+        position: absolute;
+        width: 50px;
+        z-index: 2;
+
+    }
 }

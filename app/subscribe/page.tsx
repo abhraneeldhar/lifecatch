@@ -15,23 +15,38 @@ import kidIcon from "../../public/storeImage/kidIcon.jpg"
 import adultIcon from "../../public/storeImage/adultIcon.jpg"
 import oldIcon from "../../public/storeImage/oldIcon.jpg"
 
-import Image from "next/image"
-import { useState } from "react"
+import Image, { StaticImageData } from "next/image"
+import { useEffect, useState } from "react"
 
 export default function SubscribePage() {
-    const [currentModel, setDisplayModel] = useState<"kid" | "adult" | "old">("adult");
+    
+    const kidImages=[kid1,kid2,kid3,kid4];
+    const adultImages=[adult1,adult2];
+    const oldImages=[old1,old2];
+    const [currentModel, setDisplayModel] = useState<StaticImageData[]>(adultImages);
+    const [displayBigImage,setDisplayBigImage]=useState<StaticImageData>(currentModel[0]);
+
+    useEffect(()=>{
+        setDisplayBigImage(currentModel[0])
+    },[currentModel])
     return (<>
         <div className={styles.main}>
             <div className={styles.nav}>Lifecatch store</div>
             <div className={styles.storeArea}>
                 <div className={styles.imageArea}>
-                    <div className={styles.imagesTab}></div>
+                    <div className={styles.imagesTab}>
+                        {currentModel.map((imageData)=>(
+                            <Image key={currentModel.indexOf(imageData)} src={imageData} alt={String(currentModel.indexOf(imageData))} onClick={()=>setDisplayBigImage(imageData)}/>
+                        ))}
+
+                    </div>
                     <div className={styles.bigImage}>
+                        <Image src={displayBigImage} alt="internet error"/>
                     </div>
                     <div className={styles.modelSwitcher}>
-                        <Image src={kidIcon} alt="kid" onClick={()=>{setDisplayModel("kid")}}/>
-                        <Image src={adultIcon} alt="adult" onClick={()=>{setDisplayModel("kid")}}/>
-                        <Image src={oldIcon} alt="old" onClick={()=>{setDisplayModel("kid")}}/>
+                        <Image src={kidIcon} alt="kid" onClick={()=>{setDisplayModel(kidImages)}}/>
+                        <Image src={adultIcon} alt="adult" onClick={()=>{setDisplayModel(adultImages)}}/>
+                        <Image src={oldIcon} alt="old" onClick={()=>{setDisplayModel(oldImages)}}/>
                     </div>
                     <Button className={styles.subscribeBtn}>Subscribe</Button>
                 </div>
