@@ -73,11 +73,11 @@ body{
   display: flex;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 100svh;
 
   /* background-color: blue; */
   .backgroundVid {
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
     background-color: black;
   }
