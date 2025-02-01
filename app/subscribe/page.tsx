@@ -66,7 +66,7 @@ export default function SubscribePage() {
 
                     </div>
                     <div className={styles.bigImage}>
-                        <Image src={displayBigImage} alt="internet error" />
+                        <Image unoptimized src={displayBigImage} alt="internet error" />
                     </div>
                     <div className={styles.modelSwitcher}>
                         <Image src={kidIcon} alt="kid" onClick={() => { setDisplayModel(kidImages) }} />
