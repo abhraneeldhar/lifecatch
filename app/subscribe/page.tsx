@@ -52,7 +52,7 @@ export default function SubscribePage() {
             .insert({ email: email })
         setDialogOpen(false);
         toast.success('Subscribed to Lifecatch!', {
-            position: "top-right",
+            position: "bottom-center",
             autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: false,
@@ -73,7 +73,7 @@ export default function SubscribePage() {
                     <div className={styles.dialogContent}>
 
                         <h1>Enter your email to be notified of our next update</h1>
-                        <Input ref={inputRef} placeholder="......propertiesinegypt@gmail.com" />
+                        <Input ref={inputRef} placeholder="...your email" />
                     </div>
                     <Button onClick={() => {
 

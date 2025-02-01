@@ -13,6 +13,7 @@ import fourmodels from "../public/4models.png"
 import blackJacket from "../public/blackJacket.png"
 import greenJacket from "../public/greenJacket.png"
 import teamPic from "../public/teamPic.jpg"
+import laptopPresentation from "../public/laptopPresentation.jpeg"
 
 import abhra from "../public/profilePics/Abhra.jpg"
 import sid from "../public/profilePics/Sid.jpg"
@@ -23,10 +24,9 @@ import risav from "../public/profilePics/Risav.jpg"
 import { Button } from '@/components/ui/button';
 
 import { ProfileCard } from './component/personCard';
-import Link from 'next/link';
-import { Globe, Instagram, Mail, Phone } from 'lucide-react';
-// import { useRouter } from 'next/router';
+import { Download, Globe, Instagram, Mail, Phone } from 'lucide-react';
 
+import DownloadComp from './component/download';
 export default function Home() {
 
   const teamMates: { src: StaticImageData, name: string, role: string, link: string }[] = [
@@ -61,6 +61,12 @@ export default function Home() {
       link: "https://www.linkedin.com/in/risav-chanda-a83110335"
     }
   ]
+
+  
+
+
+
+
   return (<>
     <div className="mainHome">
       <div className="navBar">
@@ -113,6 +119,22 @@ export default function Home() {
             <Image className='fourModelsImage' unoptimized alt="" src={fourmodels} />
           </div>
         </div>
+
+        <div className="downloadPitch">
+          <h1 className='sectionHeading'>Download our pitch</h1>
+
+          <div className='picNstuff'>
+
+            <Image unoptimized src={laptopPresentation} alt="" />
+
+            <div className='textStuff'>
+              <p>Experience the next level of safety with the Anti-Fall Jacket. Stay protected, stay confident—download the user guide and get started today! Click below to download now.</p>
+              <DownloadComp/>
+            </div>
+          </div>
+        </div>
+
+
 
         <div id="subscribe"></div>
         <div className='getYoursNow'>

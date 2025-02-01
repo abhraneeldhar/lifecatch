@@ -12,7 +12,7 @@
   font-family: "Poppins", Roboto;
 }
 
-body{
+body {
   scroll-behavior: smooth;
 }
 
@@ -59,7 +59,11 @@ body{
   }
 
 }
-#lifecatch, #subscribe, #target, #ourteam{
+
+#lifecatch,
+#subscribe,
+#target,
+#ourteam {
   height: 10px;
 }
 
@@ -81,7 +85,8 @@ body{
     width: 100vw;
     background-color: black;
   }
-  .backgroundVid img{
+
+  .backgroundVid img {
     object-fit: cover;
   }
 
@@ -209,7 +214,7 @@ body{
   gap: 20px;
 }
 
-.forTheQuickAndTheCautiousSection .sectionImages{
+.forTheQuickAndTheCautiousSection .sectionImages {
   height: 450px;
   margin-top: 50px;
   background-color: #8ee8ff;
@@ -220,11 +225,47 @@ body{
   width: 60vw;
   justify-content: center;
 }
-.forTheQuickAndTheCautiousSection .sectionImages img{
+
+.forTheQuickAndTheCautiousSection .sectionImages img {
   height: 550px;
   object-fit: contain;
   position: absolute;
   bottom: 0;
+}
+
+.downloadPitch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.downloadPitch img {
+  height: 400px;
+  padding: 30px;
+  border-radius: 60px;
+  object-fit: cover;
+  flex: 1;
+}
+
+.picNstuff {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.textStuff {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.downloadBtn{
+  background-color:#008080;
+  border-radius: 10px;
+  margin: auto;
+  font-size: 25px;
+  padding: 25px 20px;
 }
 
 
@@ -449,7 +490,7 @@ body{
     height: 70svh;
   }
 
-  .heroSection .subscribeBtn{
+  .heroSection .subscribeBtn {
     bottom: 25%;
   }
 
@@ -484,24 +525,28 @@ body{
   .forTheQuickAndTheCautiousSection h1 {
     text-align: center;
   }
-  .forTheQuickAndTheCautiousSection .sectionImages{
+
+  .forTheQuickAndTheCautiousSection .sectionImages {
     height: 250px;
     width: 100%;
   }
-  .forTheQuickAndTheCautiousSection .sectionImages img{
-    height:auto;
+
+  .forTheQuickAndTheCautiousSection .sectionImages img {
+    height: auto;
   }
 
-  
-  .getYoursNow .sectionContent .getYoursNowsectionImages{
+
+  .getYoursNow .sectionContent .getYoursNowsectionImages {
     height: 80vw;
     width: 80vw;
   }
-  .getYoursNow .sectionContent .rotateBox{
+
+  .getYoursNow .sectionContent .rotateBox {
     height: 80vw;
     width: 80vw;
   }
-  .getYoursNow .sectionContent .getYoursNowsectionImages{
+
+  .getYoursNow .sectionContent .getYoursNowsectionImages {
     .greenJacket {
       height: 80vw;
       width: 80vw;
@@ -517,27 +562,30 @@ body{
     }
   }
 
-  .ourteam{
-    .profileCardHolder{
+  .ourteam {
+    .profileCardHolder {
       gap: 10px;
       margin: 10px;
       margin-top: 30px;
       row-gap: 20px;
       justify-content: space-evenly;
     }
-    .profileCard{
+
+    .profileCard {
       width: 100px;
-      h1{
+
+      h1 {
         font-size: 20px;
         height: 40px;
       }
-      p{
+
+      p {
         font-size: 10px;
       }
     }
   }
 
-  .contactUs{
+  .contactUs {
     padding-bottom: 50px;
   }
 
