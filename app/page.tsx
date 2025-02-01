@@ -84,23 +84,20 @@ export default function Home() {
         </div>
         <h1>Life Catch</h1>
         <Button className='subscribeBtn'>Subscribe</Button>
-
-
       </div>
+
       <div className="teamLifeCatchSection">
         <h1 className='sectionHeading'>Who are we ?</h1>
         <div className='sectionContent'>
           <p>We are LifeCatch, a team dedicated to redefining safety with innovative airbag technology. <br /> <br />Our mission is simple: to protect lives by minimizing the impact of falls, whether on the road or in everyday life. Designed for both high-speed bikers and individuals with slower reflexes, our airbag jacket deploys in an instant, acting as a personal safety net when you need it most.
-            <br />
-            At LifeCatch, we believe that safety should never be a compromise. Whether you're riding at full speed or navigating daily challenges, our technology is built to cushion falls, reduce injuries, and give you the confidence to move freely. With cutting-edge sensors and rapid deployment, our jacket ensures protection is always one step ahead.
-            <br />
+            
             Because every second counts, and every life matters.<br /><br /> Stay fast, stay safe—LifeCatch has you covered.</p>
 
           <div className='sectionImages'>
             <Image unoptimized className='blackBikerImage ' src={blackBiker} alt="" />
             <Image unoptimized className='adultModelImage' src={adultModel} alt="" />
-
           </div>
+          
         </div>
 
         <div className='forTheQuickAndTheCautiousSection'>

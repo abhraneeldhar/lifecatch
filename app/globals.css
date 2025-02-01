@@ -261,6 +261,9 @@
 .getYoursNow {
   padding: 20px;
   min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .sectionContent {
     margin-top: 30px;
@@ -268,9 +271,9 @@
     justify-content: center;
     height: 500px;
     position: relative;
+    align-items: center;
 
     .getYoursNowsectionImages {
-      /* transform: rotate(-1deg); */
       position: relative;
       display: flex;
       justify-content: center;
@@ -278,7 +281,6 @@
       width: 500px;
       background-color: #00d4a6;
       border-radius: 20%;
-      /* animation: rotateAnimation 3s infinite; */
     }
 
     .greenJacket {
@@ -458,6 +460,10 @@
     height: 70vh;
   }
 
+  .heroSection .subscribeBtn{
+    bottom: 25%;
+  }
+
 
   .teamLifeCatchSection .sectionContent {
     display: flex;
@@ -518,5 +524,33 @@
 
     }
   }
+
+  
+  
+  .getYoursNow .sectionContent .getYoursNowsectionImages{
+    height: 80vw;
+    width: 80vw;
+  }
+  .getYoursNow .sectionContent .rotateBox{
+    height: 80vw;
+    width: 80vw;
+  }
+  .getYoursNow .sectionContent .getYoursNowsectionImages{
+    .greenJacket {
+      height: 80vw;
+      width: 80vw;
+      transform: translateX(-20%);
+      z-index: 3;
+    }
+
+    .blackJacket {
+      height: 80vw;
+      width: 80vw;
+      transform: translateX(20%);
+      z-index: 3;
+    }
+  }
+
+
 
 }
