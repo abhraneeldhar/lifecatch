@@ -73,7 +73,7 @@ body{
   display: flex;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 100svh;
 
   /* background-color: blue; */
   .backgroundVid {
@@ -102,7 +102,7 @@ body{
 
 .heroImage img {
   object-fit: cover;
-  height: 80vh;
+  height: 80svh;
   filter: drop-shadow(0 0 10rem #008080);
   animation: introHeroImage 0.7s ease-in;
 }
