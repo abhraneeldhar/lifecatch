@@ -12,6 +12,10 @@
   font-family: "Poppins", Roboto;
 }
 
+body{
+  scroll-behavior: smooth;
+}
+
 .mainHome {
   background-color: rgb(11, 11, 11);
   color: white;
@@ -54,6 +58,9 @@
     }
   }
 
+}
+#lifecatch, #subscribe, #target, #ourteam{
+  height: 10px;
 }
 
 .navBar .appLogo img {
@@ -193,7 +200,7 @@
 .forTheQuickAndTheCautiousSection {
   padding: 20px;
   padding-top: 30px;
-  height: 700px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,39 +212,15 @@
     display: flex;
     background-color: #9ce6f3;
     border-radius: 20px;
-    height: 600px;
-    width: 90%;
-
-    .blackBikerImage {
-      height: 590px;
-      z-index: 3;
-      /* right: 35%; */
-      transform: translateX(100px);
-    }
-
-    .adultModelImage {
-      /* right: 25%; */
-      height: 550px;
-      transform: translateX(200px);
-
-    }
-
-    .kidModel {
-      /* left: 25%; */
-      height: 400px;
-      z-index: 3;
-      transform: translateX(-200px);
-
-    }
-
-    .oldModel {
-      /* left: 30%; */
-      height: 550px;
-      z-index: 2;
-      transform: translateX(-90px);
-
-    }
+    height: 250px;
+    width: 90%; 
+    margin-top: 60px;  
   }
+}
+
+.forTheQuickAndTheCautiousSection .sectionImages img{
+  /* height: 400px; */
+  object-fit: contain;
 }
 
 .forTheQuickAndTheCautiousSection .sectionImages img {
@@ -503,32 +486,11 @@
   }
 
   .forTheQuickAndTheCautiousSection .sectionImages {
-    height: 500px;
+    /* height: 400px; */
     width: 100%;
 
-    .blackBikerImage {
-      height: 350px;
-      z-index: 3;
-      /* right: 35%; */
-    }
 
-    .adultModelImage {
-      /* right: 25%; */
-      height: 350px;
-    }
-
-    .kidModel {
-      /* left: 25%; */
-      height: 240px;
-      z-index: 3;
-    }
-
-    .oldModel {
-      /* left: 30%; */
-      height: 450px;
-      z-index: 2;
-
-    }
+    
   }
 
   

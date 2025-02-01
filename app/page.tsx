@@ -5,10 +5,11 @@ import Image, { StaticImageData } from "next/image"
 import logo from "../public/lifecatchlogo.png"
 import heroImage from "../public/heroImage.png"
 import backgroundVid from "../public/backgroundvid.gif"
-import kidModel from "../public/kidModel.png"
+// import kidModel from "../public/kidModel.png"
 import adultModel from "../public/adultModel.png"
 import blackBiker from "../public/blackBikerModel.png"
-import oldModel from "../public/oldModel.png"
+import fourmodels from "../public/4models.png"
+// import oldModel from "../public/oldModel.png"
 import blackJacket from "../public/blackJacket.png"
 import greenJacket from "../public/greenJacket.png"
 import teamPic from "../public/teamPic.jpg"
@@ -67,15 +68,15 @@ export default function Home() {
           <Image unoptimized src={logo} alt="" />
         </div>
         <div className="tags">
-          <div className="tagLinks">Life Catch</div>
-          <div className="tagLinks">Target</div>
-          <div className="tagLinks">Subscribe</div>
-          <div className="tagLinks">Prototype</div>
-          <div className="tagLinks">About Us</div>
+          <a href="#lifecatch" className="tagLinks">Life Catch</a>
+          <a href="#target" className="tagLinks">Target</a>
+          <a href="#subscribe" className="tagLinks">Subscribe</a>
+          {/* <a href="" className="tagLinks">Prototype</a> */}
+          <a href="#ourteam" className="tagLinks">About Us</a>
         </div>
       </div>
 
-      <div className='heroSection'>
+      <div className='heroSection' >
         <div className='backgroundVid'>
           <Image src={backgroundVid} alt="" />
         </div>
@@ -86,11 +87,12 @@ export default function Home() {
         <Button className='subscribeBtn'>Subscribe</Button>
       </div>
 
+      <div id="lifecatch"></div>
       <div className="teamLifeCatchSection">
         <h1 className='sectionHeading'>Who are we ?</h1>
         <div className='sectionContent'>
           <p>We are LifeCatch, a team dedicated to redefining safety with innovative airbag technology. <br /> <br />Our mission is simple: to protect lives by minimizing the impact of falls, whether on the road or in everyday life. Designed for both high-speed bikers and individuals with slower reflexes, our airbag jacket deploys in an instant, acting as a personal safety net when you need it most.
-            
+
             Because every second counts, and every life matters.<br /><br /> Stay fast, stay safe—LifeCatch has you covered.</p>
 
           <div className='sectionImages'>
@@ -100,16 +102,19 @@ export default function Home() {
 
         </div>
 
+        <div id='target'></div>
         <div className='forTheQuickAndTheCautiousSection'>
           <h1 className='sectionHeading'>For the Quick and the Cautious</h1>
           <div className='sectionImages'>
-            <Image className='kidModel' src={kidModel} alt="" />
+            {/* <Image className='kidModel' src={kidModel} alt="" />
             <Image className='blackBikerImage ' src={blackBiker} alt="" />
             <Image className='adultModelImage' src={adultModel} alt="" />
-            <Image className='oldModel' src={oldModel} alt="" />
+            <Image className='oldModel' src={oldModel} alt="" /> */}
+            <Image unoptimized alt="" src={fourmodels}/>
           </div>
         </div>
 
+        <div id="subscribe"></div>
         <div className='getYoursNow'>
           <h1 className='sectionHeading'>Get yours now</h1>
           <div className="sectionContent">
@@ -122,6 +127,7 @@ export default function Home() {
           </div>
         </div>
 
+        <div id='ourteam'></div>
         <div className='ourteam'>
           <h1 className='sectionHeading'>Meet the creators</h1>
           <div className="sectionImages">
@@ -135,21 +141,21 @@ export default function Home() {
           </div>
         </div>
 
-  
+
 
 
       </div>
       <div className='contactUs'>
-          <h1 className='sectionHeading'>Get in touch</h1>
-          <div className='sectionContent'>
-            <div className='links'>
-              <a><Phone/>+91 9051589728</a>
-              <a href="https://lifecatch.vercel.app"><Globe/>Lifecatch website</a>
-              <a><Mail />LifeCatch@gmail.com</a>
-              <a href="https://www.instagram.com/_life_catch/" target='_blank'><Instagram/>@_life_catch</a>
-            </div>
+        <h1 className='sectionHeading'>Get in touch</h1>
+        <div className='sectionContent'>
+          <div className='links'>
+            <a><Phone />+91 9051589728</a>
+            <a href="https://lifecatch.vercel.app"><Globe />Lifecatch website</a>
+            <a><Mail />LifeCatch@gmail.com</a>
+            <a href="https://www.instagram.com/_life_catch/" target='_blank'><Instagram />@_life_catch</a>
           </div>
         </div>
+      </div>
     </div>
   </>)
 }
