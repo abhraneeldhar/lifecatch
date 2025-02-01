@@ -3,7 +3,7 @@
     overflow: hidden;
     position: relative;
     min-height: 100vh;
-    background-color: white;
+    background-color: rgb(223, 249, 214);
 }
 
 .nav {
@@ -32,6 +32,7 @@
     position: relative;
     /* border: 2px solid black; */
     position: relative;
+    background-color: white;
 }
 
 .imagesTab {
