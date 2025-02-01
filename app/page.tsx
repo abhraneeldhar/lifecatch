@@ -97,7 +97,7 @@ export default function Home() {
             <Image unoptimized className='blackBikerImage ' src={blackBiker} alt="" />
             <Image unoptimized className='adultModelImage' src={adultModel} alt="" />
           </div>
-          
+
         </div>
 
         <div className='forTheQuickAndTheCautiousSection'>
@@ -125,7 +125,7 @@ export default function Home() {
         <div className='ourteam'>
           <h1 className='sectionHeading'>Meet the creators</h1>
           <div className="sectionImages">
-            <Image className='teamImage' src={teamPic} alt="" />
+            <Image unoptimized className='teamImage' src={teamPic} alt="" />
           </div>
 
           <div className='profileCardHolder'>
@@ -144,7 +144,7 @@ export default function Home() {
           <div className='sectionContent'>
             <div className='links'>
               <a><Phone/>+91 9051589728</a>
-              <a href=""><Globe/> Lifecatch.com</a>
+              <a href="https://lifecatch.vercel.app"><Globe/>Lifecatch website</a>
               <a><Mail />LifeCatch@gmail.com</a>
               <a href="https://www.instagram.com/_life_catch/" target='_blank'><Instagram/>@_life_catch</a>
             </div>
