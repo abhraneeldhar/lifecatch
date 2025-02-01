@@ -84,7 +84,11 @@ export default function Home() {
           <Image src={heroImage} unoptimized alt="" />
         </div>
         <h1>Life Catch</h1>
-        <Button className='subscribeBtn'>Subscribe</Button>
+
+        <Button className='subscribeBtn'>
+          <a href="/subscribe">Subscribe
+          </a>
+        </Button>
       </div>
 
       <div id="lifecatch"></div>
@@ -110,7 +114,7 @@ export default function Home() {
             <Image className='blackBikerImage ' src={blackBiker} alt="" />
             <Image className='adultModelImage' src={adultModel} alt="" />
             <Image className='oldModel' src={oldModel} alt="" /> */}
-            <Image unoptimized alt="" src={fourmodels}/>
+            <Image unoptimized alt="" src={fourmodels} />
           </div>
         </div>
 
@@ -123,7 +127,10 @@ export default function Home() {
               <Image className='greenJacket' src={greenJacket} alt="" />
               <Image className='blackJacket' src={blackJacket} alt="" />
             </div>
-            <Button className='subscribeBtn'>Subscribe</Button>
+            <Button className='subscribeBtn'>
+              <a href="/subscribe">Subscribe
+              </a>
+            </Button>
           </div>
         </div>
 
