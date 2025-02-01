@@ -16,19 +16,20 @@ import adultIcon from "../../public/storeImage/adultIcon.jpg"
 import oldIcon from "../../public/storeImage/oldIcon.jpg"
 
 import Image, { StaticImageData } from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 
 import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogHeader,
     DialogTitle,
-    DialogTrigger,
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
+import { supabase } from "../utils/supabase/client"
 
+
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function SubscribePage() {
 
@@ -42,17 +43,42 @@ export default function SubscribePage() {
         setDisplayBigImage(currentModel[0])
     }, [currentModel])
 
-    const [dialogOpen,setDialogOpen]=useState(false)
+    const [dialogOpen, setDialogOpen] = useState(false)
+    const inputRef = useRef<HTMLInputElement>(null)
+    const submitEmail = async () => {
+        const email = inputRef.current?.value || "no email";
+        const { error } = await supabase
+            .from('Emails table for lifecatch')
+            .insert({ email: email })
+        setDialogOpen(false);
+        toast.success('Subscribed to Lifecatch!', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            // progress: undefined,
+            theme: "dark",
+            });
+
+    }
     return (<>
         <div className={styles.main}>
-
+            <ToastContainer />
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-                <DialogTitle/>
-                <DialogDescription/>
+                <DialogTitle />
+                <DialogDescription />
                 <DialogContent className={styles.subscribeDialogMain}>
-                    <div>
-                        kaj cholche
+                    <div className={styles.dialogContent}>
+
+                        <h1>Enter your email to be notified of our next update</h1>
+                        <Input ref={inputRef} placeholder="......propertiesinegypt@gmail.com" />
                     </div>
+                    <Button onClick={() => {
+
+                        submitEmail()
+                    }}>Subscribe</Button>
                 </DialogContent>
             </Dialog>
 
@@ -63,7 +89,6 @@ export default function SubscribePage() {
                         {currentModel.map((imageData) => (
                             <Image key={currentModel.indexOf(imageData)} src={imageData} alt={String(currentModel.indexOf(imageData))} onClick={() => setDisplayBigImage(imageData)} />
                         ))}
-
                     </div>
                     <div className={styles.bigImage}>
                         <Image unoptimized src={displayBigImage} alt="internet error" />
@@ -73,7 +98,7 @@ export default function SubscribePage() {
                         <Image src={adultIcon} alt="adult" onClick={() => { setDisplayModel(adultImages) }} />
                         <Image src={oldIcon} alt="old" onClick={() => { setDisplayModel(oldImages) }} />
                     </div>
-                    <Button className={styles.subscribeBtn} onClick={()=>{setDialogOpen(true)}}>Subscribe</Button>
+                    <Button className={styles.subscribeBtn} onClick={() => { setDialogOpen(true) }}>Subscribe</Button>
                 </div>
                 <div className={styles.detailsArea}>
                     <h1>Wearable full body jacket</h1>

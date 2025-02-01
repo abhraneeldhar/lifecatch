@@ -147,8 +147,28 @@
     border: none;
     border-radius: 20px;
     width: 90%;
+    height: fit-content;
+    
 }
-
+.dialogContent{
+   margin:10px  30px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.subscribeDialogMain button{
+    background-color: white;
+    color: black;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
+.dialogContent h1{
+    font-size: 20px;
+}
+.dialogContent input{
+    border-radius: 5px;
+}
 
 @media (max-width: 500px) {
     .imagesTab {
