@@ -112,7 +112,7 @@ body{
   width: 100%;
   object-fit: cover;
   /* backdrop-filter: blur(20px); */
-  filter: blur(20px);
+  filter: blur(10px);
   opacity: 0.4;
 }
 
