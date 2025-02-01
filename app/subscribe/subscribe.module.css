@@ -1,58 +1,84 @@
-.main{
+.main {
     width: 100%;
     overflow: hidden;
     position: relative;
     min-height: 100vh;
-    background-color:white;
+    background-color: white;
 }
-.nav{
+
+.nav {
     background-color: black;
     color: white;
     font-size: 20px;
     text-align: center;
     padding: 5px;
     position: absolute;
-    width: 100vw; 
+    width: 100vw;
 
 }
 
-.storeArea{
+.storeArea {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
 }
-.imageArea{
+
+.imageArea {
     display: flex;
     background-color: yellow;
     flex: 1;
     align-items: center;
 }
-.imagesTab{
+
+.imagesTab {
     display: flex;
     flex-direction: column;
     background-color: blue;
     flex: 1;
     height: 100%;
 }
-.bigImage{
+
+.bigImage {
     background-color: red;
     height: 400px;
     min-width: 400px;
     flex: 7;
 }
-.detailsArea{
+
+.detailsArea {
     flex: 1;
     min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.detailsArea h1{
+
+.detailsArea h1 {
     font-size: 30px;
     font-weight: 400;
     margin: 10px 20px;
-    font-family:"Roboto","Poppins";
+    font-family: "Roboto", "Poppins";
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
 }
-.detailsArea p{
+
+.detailsArea p {
     padding-left: 30px;
 }
-.detailsArea ul{
+
+.detailsArea ul {
     margin: 30px;
+}
+
+.subscribeBtn {
+    background-color: orange;
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 10px 20px
+}
+
+.subscribeBtn:hover {
+    background-color: rgb(244, 178, 55);
 }

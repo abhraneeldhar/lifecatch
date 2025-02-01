@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button"
 import styles from "./subscribe.module.css"
 
 export default function SubscribePage() {
@@ -24,6 +25,7 @@ export default function SubscribePage() {
                         </li>
                         <li>✅ Weather-Resistant – Built to withstand different climates, keeping you safe in all conditions.</li>
                     </ul>
+                    <Button className={styles.subscribeBtn}>Subscribe</Button>
                 </div>
             </div>
         </div>
