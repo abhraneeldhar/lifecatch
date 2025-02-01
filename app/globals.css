@@ -202,34 +202,31 @@ body{
 .forTheQuickAndTheCautiousSection {
   padding: 20px;
   padding-top: 30px;
-  height: fit-content;
+  /* height: fit-content; */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-
-  .sectionImages {
-    justify-content: center;
-    position: relative;
-    display: flex;
-    background-color: #9ce6f3;
-    border-radius: 20px;
-    height: 250px;
-    width: 90%; 
-    margin-top: 60px;  
-  }
 }
 
+.forTheQuickAndTheCautiousSection .sectionImages{
+  height: 450px;
+  margin-top: 50px;
+  background-color: #8ee8ff;
+  position: relative;
+  display: flex;
+  border-radius: 30px;
+  padding: 0px 40px;
+  width: 60vw;
+  justify-content: center;
+}
 .forTheQuickAndTheCautiousSection .sectionImages img{
-  /* height: 400px; */
+  height: 550px;
   object-fit: contain;
-}
-
-.forTheQuickAndTheCautiousSection .sectionImages img {
   position: absolute;
   bottom: 0;
-  object-fit: contain;
 }
+
 
 .getYoursNow h1 {
   text-align: center;
@@ -487,16 +484,14 @@ body{
   .forTheQuickAndTheCautiousSection h1 {
     text-align: center;
   }
-
-  .forTheQuickAndTheCautiousSection .sectionImages {
-    /* height: 400px; */
+  .forTheQuickAndTheCautiousSection .sectionImages{
+    height: 250px;
     width: 100%;
-
-
-    
+  }
+  .forTheQuickAndTheCautiousSection .sectionImages img{
+    height:auto;
   }
 
-  
   
   .getYoursNow .sectionContent .getYoursNowsectionImages{
     height: 80vw;

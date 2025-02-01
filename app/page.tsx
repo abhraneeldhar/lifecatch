@@ -110,11 +110,7 @@ export default function Home() {
         <div className='forTheQuickAndTheCautiousSection'>
           <h1 className='sectionHeading'>For the Quick and the Cautious</h1>
           <div className='sectionImages'>
-            {/* <Image className='kidModel' src={kidModel} alt="" />
-            <Image className='blackBikerImage ' src={blackBiker} alt="" />
-            <Image className='adultModelImage' src={adultModel} alt="" />
-            <Image className='oldModel' src={oldModel} alt="" /> */}
-            <Image unoptimized alt="" src={fourmodels} />
+            <Image className='fourModelsImage' unoptimized alt="" src={fourmodels} />
           </div>
         </div>
 
