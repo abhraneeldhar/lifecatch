@@ -1,0 +1,57 @@
+.main{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    background-color:white;
+}
+.nav{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    width: 100vw; 
+
+}
+
+.storeArea{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.imageArea{
+    display: flex;
+    background-color: yellow;
+    flex: 1;
+}
+.imagesTab{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    flex: 1;
+}
+.bigImage{
+    background-color: red;
+    height: 400px;
+    min-width: 400px;
+    flex: 8;
+}
+
+.detailsArea{
+    flex: 1;
+    min-width: 500px;
+}
+.detailsArea h1{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 20px;
+    font-family:"Roboto","Poppins";
+}
+.detailsArea p{
+    padding-left: 30px;
+}
+.detailsArea ul{
+    margin: 30px;
+}
