@@ -25,20 +25,21 @@
     display: flex;
     background-color: yellow;
     flex: 1;
+    align-items: center;
 }
 .imagesTab{
     display: flex;
     flex-direction: column;
     background-color: blue;
     flex: 1;
+    height: 100%;
 }
 .bigImage{
     background-color: red;
     height: 400px;
     min-width: 400px;
-    flex: 8;
+    flex: 7;
 }
-
 .detailsArea{
     flex: 1;
     min-width: 500px;
