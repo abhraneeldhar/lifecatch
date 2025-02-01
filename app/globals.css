@@ -73,14 +73,16 @@ body{
   display: flex;
   justify-content: center;
   position: relative;
-  height: 100svh;
+  height: 100vh;
 
   /* background-color: blue; */
   .backgroundVid {
     height: 100vh;
     width: 100vw;
     background-color: black;
-
+  }
+  .backgroundVid img{
+    object-fit: cover;
   }
 
   .heroImage {
