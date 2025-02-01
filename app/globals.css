@@ -73,7 +73,7 @@ body{
   display: flex;
   justify-content: center;
   position: relative;
-  height: 100svh;
+  height: 100vh;
 
   /* background-color: blue; */
   .backgroundVid {
@@ -446,6 +446,7 @@ body{
   .heroSection h1 {
     top: 15%;
   }
+
 
   .heroImage img {
     height: 70svh;
