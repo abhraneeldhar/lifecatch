@@ -66,7 +66,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 100svh;
 
   /* background-color: blue; */
   .backgroundVid {
@@ -563,6 +563,7 @@
       margin: 10px;
       margin-top: 30px;
       row-gap: 20px;
+      justify-content: space-evenly;
     }
     .profileCard{
       width: 100px;
@@ -576,5 +577,8 @@
     }
   }
 
+  .contactUs{
+    padding-bottom: 50px;
+  }
 
 }
