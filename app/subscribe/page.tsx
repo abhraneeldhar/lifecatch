@@ -18,37 +18,60 @@ import oldIcon from "../../public/storeImage/oldIcon.jpg"
 import Image, { StaticImageData } from "next/image"
 import { useEffect, useState } from "react"
 
-export default function SubscribePage() {
-    
-    const kidImages=[kid1,kid2,kid3,kid4];
-    const adultImages=[adult1,adult2];
-    const oldImages=[old1,old2];
-    const [currentModel, setDisplayModel] = useState<StaticImageData[]>(adultImages);
-    const [displayBigImage,setDisplayBigImage]=useState<StaticImageData>(currentModel[0]);
 
-    useEffect(()=>{
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+
+export default function SubscribePage() {
+
+    const kidImages = [kid1, kid2, kid3, kid4];
+    const adultImages = [adult1, adult2];
+    const oldImages = [old1, old2];
+    const [currentModel, setDisplayModel] = useState<StaticImageData[]>(adultImages);
+    const [displayBigImage, setDisplayBigImage] = useState<StaticImageData>(currentModel[0]);
+
+    useEffect(() => {
         setDisplayBigImage(currentModel[0])
-    },[currentModel])
+    }, [currentModel])
+
+    const [dialogOpen,setDialogOpen]=useState(false)
     return (<>
         <div className={styles.main}>
+
+            <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                <DialogTitle/>
+                <DialogDescription/>
+                <DialogContent>
+                    <div className={styles.subscribeDialogMain}>
+                        
+                    </div>
+                </DialogContent>
+            </Dialog>
+
             <div className={styles.nav}>Lifecatch store</div>
             <div className={styles.storeArea}>
                 <div className={styles.imageArea}>
                     <div className={styles.imagesTab}>
-                        {currentModel.map((imageData)=>(
-                            <Image key={currentModel.indexOf(imageData)} src={imageData} alt={String(currentModel.indexOf(imageData))} onClick={()=>setDisplayBigImage(imageData)}/>
+                        {currentModel.map((imageData) => (
+                            <Image key={currentModel.indexOf(imageData)} src={imageData} alt={String(currentModel.indexOf(imageData))} onClick={() => setDisplayBigImage(imageData)} />
                         ))}
 
                     </div>
                     <div className={styles.bigImage}>
-                        <Image src={displayBigImage} alt="internet error"/>
+                        <Image src={displayBigImage} alt="internet error" />
                     </div>
                     <div className={styles.modelSwitcher}>
-                        <Image src={kidIcon} alt="kid" onClick={()=>{setDisplayModel(kidImages)}}/>
-                        <Image src={adultIcon} alt="adult" onClick={()=>{setDisplayModel(adultImages)}}/>
-                        <Image src={oldIcon} alt="old" onClick={()=>{setDisplayModel(oldImages)}}/>
+                        <Image src={kidIcon} alt="kid" onClick={() => { setDisplayModel(kidImages) }} />
+                        <Image src={adultIcon} alt="adult" onClick={() => { setDisplayModel(adultImages) }} />
+                        <Image src={oldIcon} alt="old" onClick={() => { setDisplayModel(oldImages) }} />
                     </div>
-                    <Button className={styles.subscribeBtn}>Subscribe</Button>
+                    <Button className={styles.subscribeBtn} onClick={()=>{setDialogOpen(true)}}>Subscribe</Button>
                 </div>
                 <div className={styles.detailsArea}>
                     <h1>Wearable full body jacket</h1>
